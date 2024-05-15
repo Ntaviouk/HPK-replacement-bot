@@ -27,7 +27,6 @@ def get_date_replacement():
 
 def get_replacement():
     lst = get("tr")
-    del lst[1]
     for i in lst:
         if len(i) == 4 and i[1] == '\xa0':
             i.insert(0, '\xa0')
@@ -37,6 +36,10 @@ def get_replacement():
                 while len(i) != 6:
                     i.insert(0, '\xa0')
 
+    for i in lst:
+        if len(i) != 6:
+            while len(i) != 6:
+                i.append('\xa0')
     return lst
 
 

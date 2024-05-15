@@ -1,5 +1,6 @@
 from selenium import webdriver
 
+
 def take_screenshot(url, screenshot_path):
     driver = webdriver.Chrome()
 
@@ -16,6 +17,7 @@ def take_screenshot(url, screenshot_path):
 
     finally:
         driver.quit()
+
 
 url = 'https://hpk.edu.ua/replacements'
 screenshot_path = r'C:\Users\dimas\PycharmProjects\HPK_telegram\Replacement API\screens\screenshot.png'
